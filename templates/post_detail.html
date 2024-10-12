@@ -4,4 +4,6 @@
     <h2>{{ post.title }}</h2>
     <p>{{ post.body }}</p>
     <p>autor: {{ post.author }}</p>
+    <a href="{% url 'post_update' post.pk %}">Editar</button></a>
+    <a href="{% url 'post_delete' post.pk %}">Borrar</button></a>
 {% endblock content %}
