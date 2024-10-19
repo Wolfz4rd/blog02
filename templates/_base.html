@@ -7,80 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Navbar con Logo, Buscador Centrado y Botones a la Derecha</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 0;
-            }
-    
-            .navbar {
-                background-color: darkred;
-                overflow: hidden;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 10px 20px;
-            }
-    
-            .navbar a, .navbar img, .navbar input[type="text"] {
-                display: block;
-                color: #f2f2f2;
-                text-align: center;
-                padding: 10px 15px;
-                text-decoration: none;
-            }
-    
-            .navbar img {
-                height: 40px;
-            }
-    
-            .navbar input[type="text"] {
-                border: none;
-                padding: 6px;
-                font-size: 15px;
-            }
-    
-            .navbar a:hover, .navbar input[type="text"]:focus {
-                background-color: #ddd;
-                color: black;
-                border-radius: 15% / 40%;
-                border: none;
-            }
-    
-            .left, .right, .center {
-                display: flex;
-                align-items: center;
-            }
-    
-            .search-container {
-                display: flex;
-                justify-content: center;
-                flex: 1;
-                border-radius: 15% /;
-            }
-
-            .logout-btn {
-                background-color: darkred;
-                color: white;
-                border-radius: 15% / 40%;
-                border: none;
-                padding: 10px 20px;
-                cursor: pointer;
-                font-size: 15px;
-                margin-left: 10px;
-            }
-        
-            .logout-btn:hover {
-                background-color: #ddd;
-                color: black;
-            }
-        </style>
-    </head>
     <body>
         <div class="navbar">
             <div class="left">
@@ -91,7 +17,7 @@
                 <a href="{% url 'post_create' %}">Crear Post</a>
                 <form method="post" action="{% url 'logout' %}">
                     {% csrf_token %}
-                    <button type="submit" class="logout-btn">cerrar sesion</button>
+                    <button type="submit" class="logout-btn">Cerrar Sesion</button>
                 </form>
                 <a href="#contact">Contacto</a>
                 <div class="center search-container">
