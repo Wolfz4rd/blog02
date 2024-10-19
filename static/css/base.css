@@ -31,23 +31,24 @@ body {
     font-size: 15px;
 }
 
-.navbar a:hover, .navbar input[type="text"]:focus {
+.navbar a:hover, .navbar  input[type="text"]:focus .search-container:disabled {
     background-color: #ddd;
     color: black;
     border-radius: 15% / 40%;
     border: none;
 }
 
-.left, .right, .center {
+.left, .center {
     display: flex;
     align-items: center;
 }
 
-.search-container {
-    display: block;
-    justify-content: center;
-    border-radius: 15% / 40%;
-    border: none;
+.search-container input[type="text"] {
+    width: 300px; /* Ancho fijo */
+    height: 40px; /* Altura fija */
+    border-radius: 20px; /* Bordes redondeados */
+    border: none; /* Borde */
+    box-sizing: border-box; /* Incluye el padding y borde en el ancho y altura */
 }
 
 .logout-btn {
@@ -65,3 +66,9 @@ body {
     background-color: #ddd;
     color: black;
 }
+
+.right {
+    display: flex;
+    justify-content: 
+}
+
