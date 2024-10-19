@@ -1,0 +1,14 @@
+{% if user.is_authenticated %}
+
+    <p>welcome to black mesa industries {{user.username}}</p>
+    <a href="{% url 'post_list' %}">enter the job</a>
+
+{% else %}
+
+    <p>you're not a black mesa worker, please refill our Document of registration</p>
+    <a href="{% url 'signup' %}">registration</a>
+    <br>
+    <p>if you are one of our workers, please insert your worker data</p>
+    <a href="{% url 'login' %}">sign up</a>
+
+{% endif %}
