@@ -31,7 +31,7 @@ body {
     font-size: 15px;
 }
 
-.navbar a:hover, .navbar input[type="text"]:focus {
+.navbar a:hover, .navbar  input[type="text"]:focus .search-container:disabled {
     background-color: #ddd;
     color: black;
     border-radius: 15% / 40%;
@@ -43,11 +43,25 @@ body {
     align-items: center;
 }
 
-.search-container {
-    display: block;
-    justify-content: center;
-    border-radius: 15% / 40%;
+.search-container input[type="text"] {
+    width: 300px;
+    height: 40px;
+    border-radius: 100px 0px 0px 100px;
+    border: none; /* Borde */
+    box-sizing: border-box; /* Incluye el padding y borde en el ancho y altura */
+}
+
+.btn-search {
+    background-color: green;
+    color: white;
+    border-radius: 0px 100px 100px 0px;
     border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    /* margin-left: 10px; */
+    font-size: 16px;
+    width: 100px;
+    height: 40px;   
 }
 
 .logout-btn {
@@ -64,4 +78,8 @@ body {
 .logout-btn:hover {
     background-color: #ddd;
     color: black;
+}
+
+.right a {
+    margin: 10px;
 }
