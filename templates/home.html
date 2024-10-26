@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    {% for post in post_list %} 
+    {% for post in post_list %}
         <div>
             <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
             <p>{{ post.body }}</p>
