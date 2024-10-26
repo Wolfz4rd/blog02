@@ -15,9 +15,11 @@ class PostDetailView(DetailView):
 class PostCreateView(CreateView):
       template_name = "post_create.html"
       model = Post
-      fields = ['title', 'body', 'author']
-      
+      fields = ['title', 'body']
       success_url = reverse_lazy("post_list")
+      def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 class PostUpdateView(UpdateView):
       template_name = "post_update.html"
