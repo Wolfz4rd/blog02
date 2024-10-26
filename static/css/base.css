@@ -5,7 +5,8 @@ body {
     background-image: url('/static/img/logo.png');
     background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
     background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .navbar {
